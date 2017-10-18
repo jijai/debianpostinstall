@@ -3,12 +3,12 @@
 # Compatible Debian 8 Stretch
 # Jijai - 09/2016
 # GPL
-#from https://gitlab.com/tifredfr/debserver/blob/master/debserver8
-#and 
 #
 # Syntaxe: # su - -c "./debian-postinstall.sh"
 # Syntaxe: or # sudo ./debian-postinstall.sh
 VERSION="0.1"
+
+https://gitlab.com/tifredfr/debserver/tree/master
 
 #=============================================================================
 # Liste des applications ànstaller: A adapter a vos besoins
@@ -31,12 +31,29 @@ else
         exit 1
 fi
 
+
 # Mise a jour de la liste des depots
 #-----------------------------------
+echo "
+deb http://deb.debian.org/debian/ jessie main contrib non-free
+#deb-src http://deb.debian.org/debian jessie main contrib non-free
 
-# Retrait du DVD des sources apt 
-sed -i 's/deb cdrom:/#deb cdrom:/g' /etc/apt/sources.list
+deb http://deb.debian.org/debian/ jessie-updates main contrib non-free
+#deb-src http://deb.debian.org/debian/ jessie-updates main contrib non-free
 
+deb http://deb.debian.org/debian-security jessie/updates main contrib non-free
+#deb-src http://deb.debian.org/debian-security jessie/updates main contrib non-free
+
+###Third Parties Repos
+## Deb-multimedia.org
+#deb http://www.deb-multimedia.org jessie main non-free
+
+## Debian Backports
+#deb http://deb.debian.org/debian jessie-backports main
+
+## HWRaid
+# wget -O - http://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key | sudo apt-key add -
+#deb http://hwraid.le-vert.net/debian jessie main" > /etc/apt/sources.list
 
 # Update 
 echo -e "\n### Mise a jour de la liste des depots\n"
