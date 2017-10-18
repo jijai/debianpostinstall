@@ -10,7 +10,7 @@ VERSION="0.1"
 
 #=============================================================================
 # Liste des applications ànstaller: A adapter a vos besoins
-LISTE="vim curl puppet ssh"
+LISTE="vim curl puppet ssh sudoers glances"
 #=============================================================================
 
 # Test que le script est lance en root
@@ -41,7 +41,52 @@ apt -y install $LISTE
 # Configuration
 #--------------
 
+#=============================================================================
+# Install sudoers
+#=============================================================================
+echo -e "\n### Installation de sudoers"
 
+apt-get install -y sudoers
+
+#=============================================================================
+# Install vim
+#=============================================================================
+
+echo -e "\n### Installation de vim"
+
+apt-get install -y vim
+
+#=============================================================================
+# Install curl
+#=============================================================================
+echo -e "\n### Installation de curl"
+
+apt-get install -y curl
+
+#=============================================================================
+# Install Glances
+#=============================================================================
+echo -e "\n### Installation de glances"
+
+apt-get install -y glances
+
+#=============================================================================
+# Install puppet agent
+#=============================================================================
+echo -e "\n### Installation de puppet-agent"
+
+apt-get install -y puppet-agent
+
+
+#=============================================================================
+# Install ssh
+#=============================================================================
+
+echo -e "\n### Installation de ssh"
+
+apt-get install -y ssh
+
+#=============================================================================
 
 echo -e "\n### Configuration finie. Il faut vous dénnecter/rconnecter pour que les modifications prennents effets"
 
