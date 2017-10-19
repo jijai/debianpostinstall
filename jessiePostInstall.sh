@@ -22,9 +22,9 @@ if [ $EUID -ne 0 ]; then
 fi
 
 #=============================================================================
-# Test si version de Debian OK
+# Test si version de Debian OK ----
 #=============================================================================
-if [ "$(cut -d. -f1 /etc/debian_version)" == "9" ]; then
+if [ "$(cut -d. -f1 /etc/debian_version)" == "8" ]; then
         echo "Version compatible, début de l'installation"
 else
         echo "Script non compatible avec votre version de Debian" 1>&2
