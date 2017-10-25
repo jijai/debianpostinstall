@@ -8,11 +8,11 @@
 # Syntaxe: or # sudo ./debian-postinstall.sh
 VERSION="0.1"
 
-https://gitlab.com/tifredfr/debserver/tree/master
+#https://gitlab.com/tifredfr/debserver/tree/master
 
 #=============================================================================
 # Liste des applications ànstaller: A adapter a vos besoins
-LISTE="vim curl puppet ssh sudo htop glances curl"
+LISTE="vim puppet-agent ssh sudo htop glances curl openjdk-8-jdk"
 #=============================================================================
 
 # Test que le script est lance en root
@@ -49,7 +49,8 @@ deb http://deb.debian.org/debian-security jessie/updates main contrib non-free
 #deb http://www.deb-multimedia.org jessie main non-free
 
 ## Debian Backports
-#deb http://deb.debian.org/debian jessie-backports main
+deb http://deb.debian.org/debian jessie-backports main
+
 
 ## HWRaid
 # wget -O - http://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key | sudo apt-key add -
