@@ -12,11 +12,8 @@ VERSION="0.1"
 
 #=============================================================================
 # Liste des applications ànstaller: A adapter a vos besoins
-<<<<<<< HEAD
-LISTE="vim curl puppet ssh sudoers glances"
-=======
 LISTE="vim curl puppet ssh sudo htop glances curl"
->>>>>>> f9aec0ccd015803f7021fe76217f5d25a54de33a
+
 #=============================================================================
 
 # Test que le script est lance en root
