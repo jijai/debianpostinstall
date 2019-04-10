@@ -1,10 +1,12 @@
 #!/bin/bash
 # Mon script de post installation serveur Debian 
-# Compatible Debian 8 Stretch
+# Compatible Debian 9 Stretch
 # Jijai - 09/2016
 # GPL
 #from https://gitlab.com/tifredfr/debserver/blob/master/debserver8
 #and 
+
+# Pour télécharger le fichier : wget https://github.com/user/debianPostInstall/raw/master/stretchPostInstall.sh
 #
 # Syntaxe: # su - -c "./debian-postinstall.sh"
 # Syntaxe: or # sudo ./debian-postinstall.sh
@@ -12,7 +14,7 @@ VERSION="0.1"
 
 #=============================================================================
 # Liste des applications ànstaller: A adapter a vos besoins
-LISTE="vim curl puppet ssh sudo htop glances curl"
+LISTE="vim curl puppet ssh sudo htop glances open-vm-tools"
 
 #=============================================================================
 
